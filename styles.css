@@ -7,6 +7,7 @@ body {
 
 .steps {
     display: flex;
+    flex-direction: row;
     justify-content: space-around; /* Adjust spacing between steps */
     margin-bottom: 20px;
 }
@@ -160,6 +161,15 @@ h4 {
         transition: left 0.3s ease; /* Smooth transition for sidebar */
         height: 100%; /* Full height sidebar */
         overflow-y: auto; /* Allow scrolling if content exceeds height */
+        margin-top: 20px;
+    }
+    
+    .steps {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around; /* Adjust spacing between steps */
+        margin-bottom: 20px;
+        gap: 15px;
     }
 }
 
@@ -186,4 +196,5 @@ h4 {
     main {
         margin-left: 270px; /* Adjust margin to accommodate sidebar */
     }
+
 }
