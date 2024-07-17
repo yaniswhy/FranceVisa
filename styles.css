@@ -1,0 +1,189 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+.steps {
+    display: flex;
+    justify-content: space-around; /* Adjust spacing between steps */
+    margin-bottom: 20px;
+}
+
+.step {
+    background-color: #E1FFE8;
+    color: #124A25;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    flex: 1;
+    margin: 0 10px;
+}
+
+.step:nth-child(2) {
+    background-color: #FFE1E1;
+    color: #4A1212;
+}
+
+.step:nth-child(3) {
+    background-color: #E2E1FF;
+    color: #17124A;
+}
+
+.step h2 {
+    margin: 0;
+    font-size: 36px; /* Adjust font size for smaller screens */
+}
+
+.step p {
+    margin: 10px 0 0;
+    font-size: 14px; /* Adjust font size for smaller screens */
+}
+
+.sidebar {
+    max-width: 230px;
+    width: 100%;
+    background-color: #f5f5f5;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(85, 85, 85, 0.1);
+    position: fixed;
+    top: 0;
+    left: -100%; /* Initially hide sidebar on small screens */
+    transition: left 0.3s ease; /* Smooth transition for sidebar */
+    height: 100%; /* Full height sidebar */
+    overflow-y: auto; /* Allow scrolling if content exceeds height */
+}
+
+.profile {
+    margin-left: 17px ;
+}
+
+.profile img {
+    width: 100px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 10px 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    background-color: #f0f0f0;
+}
+
+main {
+    padding: 20px;
+    background-color: #f5f5f5;
+    margin-left: 0; /* Remove margin for main content */
+        flex-grow: 1;
+}
+
+.info, .tips, .appointment, .extra-info {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.note {
+    color: red;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.section-title {
+    font-family: 'Marianne', sans-serif;
+    font-size: 24px;
+    margin-bottom: 15px;
+    margin-top: 20px;
+}
+
+.section-content {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+}
+
+ul li {
+    margin-bottom: 20px; /* Adjust this value as needed */
+}
+
+h4 {
+    padding-top: 20px;
+}
+
+/* Media Query for Responsive Design */
+/* Menu button for smaller screens */
+.menu-btn {
+    display: none; /* Hide menu button by default */
+}
+
+@media (max-width: 768px) {
+    .menu-btn {
+        display: block; /* Show menu button on screens up to 768px */
+        position: fixed;
+        width: 25px;
+        height: 25px;
+        top: 15px;
+        left: 15px;
+        z-index: 1000;
+        padding: 10px;
+        background-color: #ffffff;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+    }
+
+    .sidebar {
+        width: 230px; /* Adjust sidebar width for smaller screens */
+        max-width: 100%; /* Take full width on smaller screens */
+        background-color: #f5f5f5;
+        padding: 20px;
+        box-shadow: 2px 0 5px rgba(85, 85, 85, 0.1);
+        position: fixed;
+        top: 0;
+        left: -100%; /* Initially hide sidebar on small screens */
+        transition: left 0.3s ease; /* Smooth transition for sidebar */
+        height: 100%; /* Full height sidebar */
+        overflow-y: auto; /* Allow scrolling if content exceeds height */
+    }
+}
+
+/* Adjust sidebar and main content for larger screens */
+@media (min-width: 768px) {
+    .menu-btn {
+        display: none; /* Hide menu button on screens larger than 768px */
+    }
+
+    .sidebar {
+        width: 230px; /* Sidebar width for larger screens */
+        max-width: 280px; /* Limit maximum width for larger screens */
+        background-color: #f5f5f5;
+        padding: 20px;
+        box-shadow: 2px 0 5px rgba(85, 85, 85, 0.1);
+        position: fixed;
+        top: 0;
+        left: 0; /* Show sidebar on larger screens */
+        transition: left 0.3s ease; /* Smooth transition for sidebar */
+        height: 100%; /* Full height sidebar */
+        overflow-y: auto; /* Allow scrolling if content exceeds height */
+    }
+
+    main {
+        margin-left: 270px; /* Adjust margin to accommodate sidebar */
+    }
+}
